@@ -13,8 +13,8 @@ mv python-package-initializer/* your_project
 rm -rf ./python-package-initializer
 ```
 
-2. Edit setup.py's PKG_NAME
-3. Edit PKG_NAME/about.py
-4. Edit README.md
+2. Edit `setup.py`'s `PKG_NAME`
+3. Edit `PKG_NAME/about.py`
+4. Edit `README.md`
 
 Now you can write your own package 🤣
