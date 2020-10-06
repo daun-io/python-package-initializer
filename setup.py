@@ -12,7 +12,11 @@ PKG_NAME = "package_name"
 
 
 def get_requirements():
-  """get requirements from requirements.txt"""
+  """get requirements from requirements.txt
+
+  Returns:
+    requirements (list): string list of requirements
+  """
   def _openreq(reqfile):
     with open(os.path.join(os.path.dirname(__file__), reqfile)) as f:
       return f.read().splitlines()
@@ -20,10 +24,11 @@ def get_requirements():
 
 
 # Retrieve version from about.py
-def get_version():
+def get_about():
   """get meta information from about.py
+
   Returns:
-    about(list): meta information
+    about (dict): meta information
   """
   about = {}
   root = os.path.abspath(os.path.dirname(__file__))
@@ -35,8 +40,8 @@ def get_version():
 
 
 def setup_package():
-  """function for setting up package """
-  about = get_version()
+  """setup package using custom metadata """
+  about = get_about()
   setup(
     name=PKG_NAME,
     version=about["__version__"],
