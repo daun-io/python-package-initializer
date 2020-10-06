@@ -1,4 +1,4 @@
-"""python API installation scripts
+"""python package installation scripts
 run:
     > python setup.py install
 """
