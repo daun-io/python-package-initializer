@@ -4,6 +4,7 @@ run:
 """
 import os
 import io
+import importlib
 from setuptools import find_packages
 from setuptools import setup
 
@@ -27,14 +28,9 @@ def get_about():
   """get meta information from about.py
 
   Returns:
-    about (dict): meta information
+    about (Namespace): meta information
   """
-  about = {}
-  root = os.path.abspath(os.path.dirname(__file__))
-  with io.open(os.path.join(root, PKG_NAME, "about.py"), encoding="utf-8") as f:
-    # pylint: disable=exec-used
-    exec(f.read(), about)
-
+  about = importlib.import_module(PKG_NAME+".about")
   return about
 
 
@@ -43,11 +39,11 @@ def setup_package():
   about = get_about()
   setup(
     name=PKG_NAME,
-    version=about["__version__"],
-    author=about["__author__"],
-    author_email=about["__author_email__"],
-    description=about["__description__"],
-    license=about["__license__"],
+    version=about.__version__,
+    author=about.__author__,
+    author_email=about.__author_email__,
+    description=about.__description__,
+    license=about.__license__,
     packages=find_packages(),
     install_requires=get_requirements(),
     include_package_data=True,
