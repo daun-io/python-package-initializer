@@ -23,7 +23,6 @@ def get_requirements():
   return _openreq("requirements.txt")
 
 
-# Retrieve version from about.py
 def get_about():
   """get meta information from about.py
 
