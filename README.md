@@ -1,4 +1,14 @@
-# Python package initializer 🐍
+
+<h1 align="center">
+  <br>
+  Python package initializer 🐍
+  </br>
+</h1>
+
+<p align="center">
+  <a href="https://github.com/nyanye/fussy-lazy-python-styleguide"><img src="https://img.shields.io/badge/code%20style-fussylazy-blue.svg" alt="code style"></a>
+</p>
+
 clean and simple python package initializer without any dependency and hidden magic
 
 ## Instruction
