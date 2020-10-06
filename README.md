@@ -29,3 +29,16 @@ rm -rf ./python-package-initializer
 5. Edit `README.md` - basic repository document written in markdown format
 
 Now you can write your own package 🤣
+
+## Why is it useful
+
+1. `about.py` module keeps package metadata in **single source** which is referenced by `setup.py` and package namespace.
+
+```python
+>>> import package_name
+>>> package_name.__version__
+>>> '0.3.9'
+```
+
+2. I'm tired of writing down `setup.py` script for every python package. It includes essentials but also minimal so it's highly re-usable
+3. It's compatible from the last release of Python 2.7 to latest release of Python 3.8
