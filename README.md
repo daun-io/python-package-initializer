@@ -15,5 +15,6 @@ rm -rf ./python-package-initializer
 
 2. Edit setup.py's PKG_NAME
 3. Edit PKG_NAME/about.py
+4. Edit README.md
 
 Done 🤣
